@@ -1,0 +1,16 @@
+name: my first githubactions demo
+on:
+  workflow_dispatch: 
+jobs:
+  hello-job:
+     name: my first job
+     runs-on: ubunut-latest
+     steps:
+        - name: step1 - say hello
+          run: echo "hello team"
+        - name: step2 - display date
+          run: date
+        - name: step3 - display working dir
+          run: pwd
+        - name: step 4 - Display message
+          run:  echo " The actions are done"
