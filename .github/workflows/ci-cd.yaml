@@ -1,18 +1,22 @@
 name: push to actions demo
+
 on:
   push:
     branches:
-         - main
-         - test
+      - main
+      - test
 
 jobs:
   demo-job:
-     name: push to main branch
-     runs-on: ubuntu-latest
-     steps:
-       - name: step1: welcome
-         run: echo "Code is pushed to main branch"
-       - name: step2: shown branch
-         run: echo " This is main branch"
-       - name: step3: completed
-         run: echo " The githuba ctions demo is done"
+    name: push to main branch
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: step1 welcome
+        run: echo "Code is pushed to main branch"
+
+      - name: step2 show branch
+        run: echo "This is main branch"
+
+      - name: step3 completed
+        run: echo "The GitHub Actions demo is done"
