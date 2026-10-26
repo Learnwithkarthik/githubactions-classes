@@ -4,7 +4,7 @@ on:
 jobs:
   hello-job:
      name: my first job
-     runs-on: ubunut-latest
+     runs-on: ubuntu-latest
      steps:
         - name: step1 - say hello
           run: echo "hello team"
