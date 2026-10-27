@@ -18,7 +18,7 @@ provider "google" {
 # ------------------------------------------------------------
 # GCS BUCKET
 # ------------------------------------------------------------
-resource "google_storage_bucket" "student_bucket" {
+resource "google_storage_bucket" "student1_bucket" {
   name          = "${local.name_prefix}-bucket"
   location      = var.bucket_location
   storage_class = var.storage_class
@@ -38,7 +38,7 @@ resource "google_compute_instance" "student_vm" {
   machine_type = var.machine_type
   zone         = var.zone
 
-  tags = ["student-demo", "terraform"]
+  tags = ["student-demo1", "terraform"]
 
   boot_disk {
     initialize_params {
