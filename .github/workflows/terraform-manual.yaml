@@ -14,7 +14,7 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  TF_DIR: terraform-gcp-students-demo/terraform-gcp-students-demo
+  TF_DIR: terraform-gcp-student-demo/terraform-gcp-student-demo
   TF_IN_AUTOMATION: "true"
 
 jobs:
