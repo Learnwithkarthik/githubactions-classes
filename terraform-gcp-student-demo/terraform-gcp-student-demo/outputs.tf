@@ -5,7 +5,7 @@ output "bucket_name" {
 
 output "bucket_url" {
   description = "GCS URL of the created bucket."
-  value       = google_storage_bucket.student_bucket.url
+  value       = google_storage_bucket.student1_bucket.url
 }
 
 output "vm_name" {
