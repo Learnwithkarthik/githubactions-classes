@@ -11,7 +11,6 @@ permissions:
 
 jobs:
   gcp-authentication:
-    name: test-connect-gcp
     runs-on: ubuntu-latest
 
     steps:
@@ -28,14 +27,28 @@ jobs:
       - name: Setup gcloud CLI
         uses: google-github-actions/setup-gcloud@v2
 
-      - name: Verify authentication
+      - name: Verify Authentication
         run: |
           gcloud config list
           gcloud auth list
 
-      - name: List Cloud Storage buckets
-        run: |
-          gcloud storage buckets list
-      
-         
-          
+      - name: Install Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: "1.14.0"
+
+      - name: Terraform Init
+        working-directory: ./terraform-gcp-student-demo/terraform-gcp-student-demo
+        run: terraform init
+
+      - name: Terraform Validate
+        working-directory: ./terraform-gcp-student-demo/terraform-gcp-student-demo
+        run: terraform validate
+
+      - name: Terraform Plan
+        working-directory: ./terraform-gcp-student-demo/terraform-gcp-student-demo
+        run: terraform plan
+
+      - name: Terraform Apply
+        working-directory: ./terraform-gcp-student-demo/terraform-gcp-student-demo
+        run: terraform apply -input=false -auto-approve
