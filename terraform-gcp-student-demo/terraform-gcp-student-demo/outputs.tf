@@ -1,6 +1,6 @@
 output "bucket_name" {
   description = "Name of the created GCS bucket."
-  value       = google_storage_bucket.student_bucket.name
+  value       = google_storage_bucket.student1_bucket.name
 }
 
 output "bucket_url" {
