@@ -3,7 +3,7 @@ project_id = "project-08394b4a-cbcc-4585-bd5"
 
 region      = "asia-south1"
 zone        = "asia-south1-a"
-environment = "prod"
+environment = "test"
 owner       = "devops-students"
 
 bucket_location = "ASIA-SOUTH1"
